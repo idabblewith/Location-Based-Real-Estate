@@ -1,0 +1,1 @@
+export type MUIBtnColorTypes = "error" | "info" | "inherit" | "primary" | "secondary" | "success" | "warning";
