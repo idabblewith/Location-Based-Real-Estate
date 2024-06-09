@@ -1,14 +1,22 @@
-import { Header } from '@/components/Header'
-import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+import { Header } from "@/components/Header";
+import { Box, Flex } from "@chakra-ui/react";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 export const Route = createRootRoute({
-    component: () => (
-        <>
-            <Header />
-            <hr />
-            <Outlet />
-            <TanStackRouterDevtools />
-        </>
-    ),
-})
+  component: () => (
+    <Box className="relative h-screen w-screen bg-red-500">
+      <Header /> {/* Absoulte header */}
+      <Box className="absolute h-full w-full bg-slate-700">
+        <Box
+          bg={"orange"}
+          className="flex h-full w-full flex-col"
+          justifyContent={"center"}
+        >
+          <Outlet />
+          <TanStackRouterDevtools />
+        </Box>
+      </Box>
+    </Box>
+  ),
+});
