@@ -3,7 +3,7 @@ import { Box, Button } from "@chakra-ui/react";
 export const Header = () => {
   const navigate = useNavigate();
   return (
-    <Box className="absolute z-20 flex w-full flex-row px-4 py-2">
+    <Box className="absolute z-20 flex w-full flex-row bg-gray-800 px-4 py-2">
       <Box className="mr-auto">
         <Button
           rounded={6}
@@ -13,11 +13,15 @@ export const Header = () => {
           color={"white"}
           className="text-black dark:text-white"
           onClick={() => navigate({ to: "/" })}
+          fontSize={"larger"}
         >
           LBREP
         </Button>
       </Box>
-      <Box className="">
+      {/* <Box className="">
+    
+      </Box> */}
+      <Box className="ml-auto">
         <Button
           rounded={6}
           mr={2}
@@ -26,18 +30,17 @@ export const Header = () => {
         >
           Listings
         </Button>
-        <Button
+        {/* <Button
           rounded={6}
+          mr={2}
           className="text-black dark:text-white"
           onClick={() => navigate({ to: "/" })}
         >
           Agencies
         </Button>
-      </Box>
-      <Box className="ml-auto">
         <Button mr={2} rounded={6} onClick={() => navigate({ to: "/" })}>
           Add Property
-        </Button>
+        </Button> */}
         <Button
           onClick={() => navigate({ to: "/login" })}
           bg={"blue.500"}

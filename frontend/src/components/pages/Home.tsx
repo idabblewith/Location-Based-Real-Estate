@@ -1,6 +1,6 @@
-import { Box, Button, Center, Text } from "@chakra-ui/react";
-import { useNavigate } from "@tanstack/react-router";
 import city from "@/assets/city.jpg";
+import { Button, Center, Text } from "@chakra-ui/react";
+import { useNavigate } from "@tanstack/react-router";
 export const Home = () => {
   const navigate = useNavigate();
   return (
